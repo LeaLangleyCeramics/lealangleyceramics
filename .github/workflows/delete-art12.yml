@@ -1,0 +1,17 @@
+name: Delete File
+
+on:
+  workflow_dispatch:
+
+jobs:
+  delete:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Delete the file
+        run: |
+          git rm delete-art12.jpg
+          git commit -m "Remove delete-art12.jpg"
+          git push
