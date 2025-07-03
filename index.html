@@ -6,88 +6,82 @@
   <title>Lea Langley Art & Ceramics</title>
   <style>
     body {
-      font-family: Georgia, serif;
       margin: 0;
-      background: #f9f5f0;
-      color: #3e3e3e;
+      font-family: Georgia, serif;
+      background-color: #f6f6f1;
+      color: #333;
     }
     header {
-      background: #fff;
-      padding: 20px 40px;
-      position: sticky;
-      top: 0;
+      background: #ffffff;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      z-index: 1000;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    header nav a {
-      margin-left: 20px;
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      font-weight: normal;
+    }
+    nav a {
+      margin-left: 1.5rem;
       text-decoration: none;
       color: #333;
       font-weight: 500;
     }
     .banner {
       width: 100%;
-      height: 400px;
-      background: url('images/ceramic-banner.jpg') no-repeat center center;
+      height: 300px;
+      background-image: url("images/ceramic-banner.jpg");
       background-size: cover;
+      background-position: center;
     }
     .about {
       display: flex;
-      flex-wrap: wrap;
+      align-items: flex-start;
       justify-content: center;
-      align-items: center;
-      gap: 40px;
-      padding: 60px 40px;
-      background: #fff;
+      padding: 3rem 2rem;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
     .about-text {
-      flex: 1;
-      min-width: 280px;
-      max-width: 600px;
+      max-width: 500px;
+      font-size: 1rem;
+      line-height: 1.7;
     }
     .about img {
-      width: 300px;
+      max-width: 250px;
       border-radius: 8px;
     }
     h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 1.6rem;
     }
     .gallery-section {
-      padding: 40px;
+      margin: 2rem;
     }
-    .gallery-section h3 {
-      font-size: 22px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 10px;
-    }
-    .gallery {
+    .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
     }
-    .gallery img {
+    .gallery-grid img {
       width: 100%;
-      height: auto;
-      border-radius: 6px;
+      border-radius: 4px;
       object-fit: cover;
-    }
-    .footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 14px;
-      color: #999;
+      height: 250px;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <div><strong>Lea Langley Art & Ceramics</strong></div>
+    <h1>Lea Langley Art & Ceramics</h1>
     <nav>
       <a href="#about">About</a>
       <a href="#gallery">Gallery</a>
@@ -102,38 +96,42 @@
     <div class="about-text">
       <h2>About</h2>
       <p>
-        Creativity has always been in my blood, but my journey into ceramics began just a year ago and I’ve been completely hooked ever since. After selling my business in the catering industry, I knew I needed to step away from the rat race and embrace a slower, more fulfilling way of life.<br><br>
-        Now, living in Lancashire overlooking the rolling hills into Yorkshire, I’m surrounded by wildlife and a peaceful landscape that deeply inspires my work.<br><br>
+        Creativity has always been in my blood, but my journey into ceramics began just a year ago and I’ve been completely hooked ever since. After selling my business in the catering industry, I knew I needed to step away from the rat race and embrace a slower, more fulfilling way of life.
+      </p>
+      <p>
+        Now, living in Lancashire overlooking the rolling hills into Yorkshire, I’m surrounded by wildlife and a peaceful landscape that deeply inspires my work.
+      </p>
+      <p>
         I love to experiment, working with both wheel-thrown and hand-built techniques to create a mix of functional and sculptural pieces. Glaze exploration is a huge part of my process and I’m always layering colours and textures to see how they interact, adding depth and individuality to each piece.
       </p>
     </div>
-    <img src="images/lea-profile.jpg" alt="Lea Langley">
+    <img src="images/lea-profile.png" alt="Lea Langley" />
   </section>
 
   <section id="gallery" class="gallery-section">
     <h2>Gallery</h2>
 
     <h3>Functional Ceramics</h3>
-    <div class="gallery">
-      <img src="images/ceramic1.jpg" alt="Green Bowls">
-      <img src="images/ceramic2.jpg" alt="Functional Bowl">
+    <div class="gallery-grid">
+      <img src="images/ceramic1.jpg" alt="Functional Ceramic Piece 1">
+      <img src="images/ceramic2.jpg" alt="Functional Ceramic Piece 2">
+      <img src="images/ceramic3.jpg" alt="Functional Ceramic Piece 3">
     </div>
 
     <h3>Sculptural Ceramics</h3>
-    <div class="gallery">
-      <img src="images/ceramic3.jpg" alt="Coral Sculptural Piece">
+    <div class="gallery-grid">
+      <img src="images/ceramic4.jpg" alt="Sculptural Ceramic Piece 1">
+      <img src="images/ceramic5.jpg" alt="Sculptural Ceramic Piece 2">
+      <img src="images/ceramic6.png" alt="Sculptural Ceramic Piece 3">
     </div>
 
     <h3>Artwork</h3>
-    <div class="gallery">
+    <div class="gallery-grid">
       <img src="images/art1.jpg" alt="Artwork 1">
       <img src="images/art2.jpg" alt="Artwork 2">
+      <img src="images/art3.jpg" alt="Artwork 3">
     </div>
   </section>
-
-  <footer class="footer">
-    &copy; 2025 Lea Langley Art & Ceramics. All rights reserved.
-  </footer>
 
 </body>
 </html>
