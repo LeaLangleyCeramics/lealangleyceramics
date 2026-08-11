@@ -1,341 +1,1293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lea Langley Art</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P89YZ4S1JY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <title>Lea Langley | Contemporary Artist</title>
 
-  gtag('config', 'G-P89YZ4S1JY');
-</script>
-  
+  <meta
+    name="description"
+    content="Lea Langley is a contemporary artist working across drawing, space and installation. Explore Dark Matter and selected works."
+  >
+
   <style>
+    :root {
+      --black: #111111;
+      --soft-black: #222222;
+      --grey: #6f6f6f;
+      --light-grey: #eeeeea;
+      --cream: #f7f6f2;
+      --white: #ffffff;
+      --max-width: 1320px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Georgia, serif;
-      background-color: #f6f6f1;
-      color: #333;
+      background: var(--white);
+      color: var(--black);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
     }
-    header {
-      background: #ffffff;
-      padding: 1rem 2rem;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    /* HEADER */
+
+    .site-header {
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 1.2rem 4vw;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #e4e4e4;
+      backdrop-filter: blur(8px);
     }
-    header h1 {
-      margin: 0;
-      font-size: 1.4rem;
-      font-weight: normal;
+
+    .site-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
     }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
     nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
+      padding-bottom: 0.2rem;
+      border-bottom: 1px solid transparent;
     }
-    .banner {
+
+    nav a:hover {
+      border-bottom-color: var(--black);
+    }
+
+    /* HERO */
+
+    .hero {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 4.5rem 4vw 3rem;
+    }
+
+    .hero-heading {
+      margin-bottom: 2.5rem;
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      margin-bottom: 0.8rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.4rem, 8vw, 8rem);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-subtitle {
+      margin-top: 1.5rem;
+      font-size: clamp(1rem, 1.6vw, 1.35rem);
+      letter-spacing: 0.06em;
+    }
+
+    .hero-image {
       width: 100%;
-      height: 300px;
-      background-image: url("images/ceramic-banner.jpg");
-      background-size: cover;
-      background-position: center;
+      max-height: 86vh;
+      object-fit: contain;
+      background: var(--cream);
     }
-    .about-section {
-  padding: 60px 10%;
-  background-color: #f9f9f9;
-}
 
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.about-text {
-  flex: 1;
-  min-width: 300px;
-}
-
-.about-text h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.about-text p {
-  margin-bottom: 15px;
-  line-height: 1.6;
-  color: #333;
-}
-
-.about-image {
-  flex: 0 0 300px;
-  max-width: 300px;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
+    .hero-caption {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 0.8rem;
+      font-size: 0.8rem;
+      color: var(--grey);
     }
+
+    /* GENERAL */
+
+    .section {
+      padding: 8rem 4vw;
+    }
+
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .section-number {
+      margin-bottom: 1.2rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+
     h2 {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 1.6rem;
+      margin: 0 0 2rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      font-weight: 400;
+      line-height: 1;
     }
-    .gallery-section {
-      margin: 2rem;
+
+    h3 {
+      margin: 0 0 1rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      font-weight: 400;
     }
-    .gallery-grid {
+
+    .intro-text {
+      max-width: 820px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+      line-height: 1.55;
+    }
+
+    .body-copy {
+      max-width: 720px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .dark-section {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .dark-section .section-number,
+    .dark-section .caption,
+    .dark-section .body-copy {
+      color: #bdbdbd;
+    }
+
+    .cream-section {
+      background: var(--cream);
+    }
+
+    /* PROJECT INTRO */
+
+    .project-intro {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.65fr);
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .project-meta {
+      border-top: 1px solid #bbb;
+      padding-top: 1.2rem;
+      font-size: 0.9rem;
+    }
+
+    .project-meta p {
+      margin-bottom: 0.5rem;
+    }
+
+    /* IMAGE GRIDS */
+
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem;
+      margin-top: 4rem;
+      align-items: start;
+    }
+
+    .three-column {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1.5rem;
-      margin-top: 1rem;
+      margin-top: 4rem;
+      align-items: start;
     }
-    .gallery-grid img {
+
+    figure {
+      margin: 0;
+    }
+
+    figure img {
+      background: #f0f0ed;
+    }
+
+    .portrait-art img {
+      aspect-ratio: 3 / 4;
+      object-fit: contain;
+    }
+
+    .landscape-art img {
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+    }
+
+    .caption {
+      margin-top: 0.65rem;
+      font-size: 0.78rem;
+      line-height: 1.4;
+      color: var(--grey);
+    }
+
+    /* LARGE ART */
+
+    .large-artwork {
+      margin-top: 4.5rem;
+    }
+
+    .large-artwork img {
+      max-height: 85vh;
+      object-fit: contain;
+    }
+
+    /* TEXT / IMAGE SPLIT */
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .split.reverse {
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    }
+
+    /* MAKING */
+
+    .making-image {
+      max-width: 760px;
+      margin: 4rem auto 0;
+    }
+
+    /* FINAL DARK MATTER */
+
+    .final-project {
+      padding-top: 9rem;
+      padding-bottom: 9rem;
+    }
+
+    .final-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .final-title h2 {
+      font-size: clamp(4rem, 10vw, 9rem);
+      letter-spacing: -0.04em;
+    }
+
+    .final-image {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .final-description {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      max-width: 1000px;
+      margin: 4rem auto 0;
+    }
+
+    .final-description p {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+    }
+
+    /* VIDEO PLACEHOLDER */
+
+    .video-placeholder {
+      margin-top: 5rem;
+      padding: 5rem 2rem;
+      border: 1px solid #444;
+      text-align: center;
+    }
+
+    .video-placeholder p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #aaa;
+    }
+
+    /* RECOGNITION */
+
+    .recognition-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .award-text {
+      max-width: 540px;
+    }
+
+    .award-title {
+      margin-bottom: 0.8rem;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+    }
+
+    /* PRACTICE */
+
+    .practice-grid {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 6rem;
+    }
+
+    .practice-statement {
+      max-width: 760px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+      line-height: 1.55;
+    }
+
+    /* FUTURE WORK */
+
+    .future-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .future-card {
+      min-height: 310px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2.5rem;
+      border: 1px solid #ccc;
+    }
+
+    .future-card p {
+      color: var(--grey);
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: var(--black);
+      color: white;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 6rem;
+    }
+
+    .contact a {
+      border-bottom: 1px solid #777;
+    }
+
+    .contact-email {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.4rem, 3vw, 2.5rem);
+      overflow-wrap: anywhere;
+    }
+
+    form {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #bbb;
+    }
+
+    input,
+    textarea {
       width: 100%;
-      border-radius: 4px;
-      object-fit: cover;
-      height: 250px;
+      padding: 0.9rem 0;
+      border: 0;
+      border-bottom: 1px solid #666;
+      border-radius: 0;
+      background: transparent;
+      color: white;
+      font: inherit;
+      outline: none;
     }
-  .shop-section {
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: #f5f5f5;
-}
 
-.shop-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
 
-.shop-section p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #444;
-}
+    input:focus,
+    textarea:focus {
+      border-bottom-color: white;
+    }
 
-.shop-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #333;
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
+    button {
+      width: fit-content;
+      margin-top: 1rem;
+      padding: 0.9rem 1.5rem;
+      border: 1px solid white;
+      background: white;
+      color: black;
+      font: inherit;
+      cursor: pointer;
+    }
 
-.shop-button:hover {
-  background-color: #555;
-}
-.contact-section {
-  background-color: #fdf2e9;
-  padding: 4rem 2rem;
-  text-align: center;
-}
+    button:hover {
+      background: transparent;
+      color: white;
+    }
 
-.contact-section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
+    /* FOOTER */
 
-.contact-section p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #555;
-}
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 2rem 4vw;
+      background: var(--black);
+      color: #8f8f8f;
+      border-top: 1px solid #333;
+      font-size: 0.75rem;
+    }
 
-.contact-section a {
-  color: #b85c38;
-  text-decoration: none;
-  font-weight: bold;
-}
+    /* RESPONSIVE */
 
-.contact-form {
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: left;
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
+    @media (max-width: 900px) {
 
-.contact-form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  color: #333;
-}
+      .site-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+      }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1.2rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
+      nav {
+        gap: 1rem;
+      }
 
-.contact-form button {
-  background-color: #b85c38;
-  color: white;
-  padding: 0.75rem 2rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+      .project-intro,
+      .split,
+      .split.reverse,
+      .recognition-grid,
+      .practice-grid,
+      .contact-wrap,
+      .final-description {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
 
-.contact-form button:hover {
-  background-color: #94462d;
-}
+      .two-column,
+      .three-column {
+        grid-template-columns: 1fr;
+      }
+
+      .future-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding-top: 5.5rem;
+        padding-bottom: 5.5rem;
+      }
+
+      .hero {
+        padding-top: 3rem;
+      }
+
+      .hero-caption {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+
+      .site-header {
+        padding: 1rem 1.2rem;
+      }
+
+      nav {
+        font-size: 0.7rem;
+      }
+
+      .hero,
+      .section {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+      }
+
+      footer {
+        flex-direction: column;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+      }
+    }
   </style>
 </head>
+
+
 <body>
-  <header>
-    <h1>Lea Langley Art & Ceramics</h1>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    <a href="#top" class="site-name">Lea Langley</a>
+
     <nav>
+      <a href="#work">Work</a>
+      <a href="#practice">Practice</a>
       <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="https://www.ebay.co.uk/usr/lealangley-ceramics" target="_blank">Shop</a>
+      <a href="#recognition">Recognition</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <div class="banner"></div>
 
-  <section id="about" class="about-section">
-  <div class="about-content">
-    <div class="about-text">
-      <h2>About</h2>
-      <p>Creativity has always been in my blood, but my journey into ceramics began just a year ago and I’ve been completely hooked ever since. After selling my business in the catering industry, I knew I needed to step away from the rat race and embrace a slower, more fulfilling way of life.</p>
-      <p>Now, living in Lancashire overlooking the rolling hills into Yorkshire, I’m surrounded by wildlife and a peaceful landscape that deeply inspires my work.</p>
-      <p>I love to experiment, working with both wheel-thrown and hand-built techniques to create a mix of functional and sculptural pieces. Glaze exploration is a huge part of my process and I’m always layering colours and textures to see how they interact, adding depth and individuality to each piece.</p>
-      <p>Alongside my ceramics, drawing and painting have always been a quiet but constant passion. My artwork often captures moments of stillness, nature, and architecture—drawn from the places and things I feel deeply connected to. Whether it's an old building, a figure from the imagination, or the hills I call home, each piece holds a story. Like my pottery, every drawing is personal—rooted in feeling, memory, and curiosity.</p>
-    </div>
-    <div class="about-image">
-      <img src="images/lea-profile.png" alt="Lea Langley" />
-    </div>
-  </div>
-</section>
+  <!-- HERO -->
 
-  <section id="gallery" class="gallery-section">
-    <h2>Gallery</h2>
+  <main id="top">
 
-    <h3>Functional Ceramics</h3>
-    <div class="gallery-grid">
-      <img src="images/ceramic1.jpg" alt="Functional Ceramic Piece 1">
-      <img src="images/ceramic2.jpg" alt="Functional Ceramic Piece 2">
-      <img src="images/ceramic3.jpg" alt="Functional Ceramic Piece 3">
-    </div>
+    <section class="hero">
 
-    <h3>Sculptural Ceramics</h3>
-    <div class="gallery-grid">
-      <img src="images/ceramic-dish.jpg" alt="Sculptural Ceramic Piece 1">
-      <img src="images/Wavy-dish.jpg" alt="Sculptural Ceramic Piece 2">
-      <img src="images/ceramic6.png" alt="Sculptural Ceramic Piece 3">
-    </div>
+      <div class="hero-heading">
+        <p class="eyebrow">Contemporary Artist</p>
 
-    <h3>Artwork</h3>
-    <div class="gallery-grid">
-    <figure style="text-align: center; display:inline-block; margin: 20px;">
-      <img src="images/moody-studley.jpg" alt="Mood Over Stoodley Pike" style="width:250px:">
-      </figcaption>Mood Over Stoodley Pike</figcaption>
-    </figure>
+        <h1>Lea Langley</h1>
 
-    <figure style="text-align: center; display: inline-block; margin: 20px;">
-      <img src="images/JL4qXuYg.jpeg" alt="Todmorden Arches" style="width:250px:">
-      <figcaption>Todmorden Arches</figcaption>
-    </figure>
+        <p class="hero-subtitle">
+          Drawing · Space · Installation
+        </p>
+      </div>
 
-    <figure style="text-align: center; display: inline-block; margin: 20px;">
-      <img src="images/subtlestudley.jpg" alt="Stoodley In Stillness" style="width:250px:">
-      </figcaption>Stoodley In Stillness</figcaption>
-    </figure>
+      <img
+        class="hero-image"
+        src="images/dark-matter-installation-2026.jpg"
+        alt="Dark Matter installation by Lea Langley"
+      >
 
-    <figure style="text-align: center; display: inline-block; margin: 20px;">
-      <img src="images/hare.jpg" alt="Spring Hare" style="width:250px:">
-      </figcaption>Spring Hare</figcaption>
-    </figure>
+      <div class="hero-caption">
+        <span><em>Dark Matter</em>, 2026</span>
+        <span>Installation</span>
+      </div>
 
-    <figure style="text-align: center; display: inline-block; margin: 20px;">
-      <img src="images/building.jpg" alt="Radcliffe Dome" style="width:250px:">
-      </figcaption>Radcliffe Dome</figcaption>
-    </figure>
+    </section>
 
-    <figure style="text-align: center; display: inline-block; margin: 20px;">
-      <img src="images/central-tod.jpg" alt="Central Todmorden" style="width:250px:">
-      </figcaption>Central Todmorden</figcaption>
-    </figure>
 
-    <figure style="text-align: center; display: inline-block; margin: 20px;">
-      <img src="images/town-hall.jpg" alt="Todmorden Town Hall" style="width:250px:">
-      </figcaption>Todmorden Town Hall</figcaption>
-    </figure> 
-        
-    <figure style="text-align: center; display:inline-block; margin: 20px;">
-      <img src="images/venice.jpg" alt="Venetian Passage" style="width:250px:">
-      </figcaption>Venetian Passage</figcaption>
-    </figure>
+    <!-- DARK MATTER INTRO -->
 
-     <figure style="text-align: center; display:inline-block; margin: 20px;">]
-      <img src="images/g4LoxPeW.jpeg" alt="Hebden Bridge Mill" style="width:250px:">
-      </figcapture>Hebden Bridge Mill</figcapture>
-    </figure>
+    <section class="section cream-section" id="work">
 
-     <figure style="text-align: center; display:inline-block; margin: 20px;">]
-      <img src="images/IMG_8611.jpeg" alt="Lloyds Bank Hebden Bridge" style="width:250px:">
-      </figcaption>Lloyds Bank Hebden Bridge</figcaption>
-    </figure>
-      
-  </section>
+      <div class="section-inner">
 
-  <section class="shop-section">
-    <h2>Shop My Art & Ceramics</h2>
-    <p>If you'd like to purchase any of my handmade pieces or artworks, visit my eBay shop below. New pieces are added regularly!</p>
-    <a href="https://www.ebay.co.uk/usr/lealangley-ceramics" target="_blank" class="shop-button">Visit My eBay Shop</a>
-  </section>
-  
-  <section id="contact" class="contact-section">
-  <h2>Contact Me</h2>
-  <p>If you'd like to get in touch, please use the form below or email me directly at 
-    <a href="mailto:studio@lealangleyceramics.co.uk">studio@lealangleyceramics.co.uk</a>
-  </p>
+        <div class="project-intro">
 
-  <form action="https://formspree.io/f/mqabjdga" method="POST" class="contact-form">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+          <div>
+            <p class="section-number">01 — Selected Project</p>
 
-    <label for="email">Email Address:</label>
-    <input type="email" id="email" name="email" required>
+            <h2>Dark Matter</h2>
 
-    <label for="phone">Telephone Number:</label>
-    <input type="tel" id="phone" name="phone">
+            <p class="intro-text">
+              An investigation into invisible forces, negative space and the
+              point at which drawing moves beyond the surface of paper and
+              begins to occupy physical space.
+            </p>
+          </div>
 
-    <label for="message">Enquiry:</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
+          <div class="project-meta">
+            <p><strong>Year</strong> — 2026</p>
+            <p><strong>Practice</strong> — Drawing / Installation</p>
+            <p><strong>Materials</strong> — Charcoal, thread, light and space</p>
+          </div>
 
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INVISIBLE FORCES -->
+
+    <section class="section">
+
+      <div class="section-inner">
+
+        <p class="section-number">01.1 — Research</p>
+
+        <h2>Invisible Forces</h2>
+
+        <p class="intro-text">
+          How do you draw something that cannot be seen?
+        </p>
+
+        <p class="body-copy">
+          The project began with an exploration of forces that are understood
+          through their effects rather than through direct visibility. Line,
+          movement and density became ways of suggesting energy acting upon
+          space.
+        </p>
+
+        <div class="large-artwork portrait-art">
+          <figure>
+
+            <img
+              src="images/dark-matter-invisible-forces.jpg"
+              alt="Invisible forces research drawing"
+            >
+
+            <figcaption class="caption">
+              Invisible Forces — research drawing
+            </figcaption>
+
+          </figure>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NEGATIVE SPACE -->
+
+    <section class="section dark-section">
+
+      <div class="section-inner">
+
+        <p class="section-number">01.2 — Research</p>
+
+        <h2>Negative Space</h2>
+
+        <p class="intro-text">
+          The investigation shifted from what could not be seen to what was
+          deliberately left unmade.
+        </p>
+
+        <p class="body-copy">
+          By drawing around familiar forms rather than describing them
+          directly, absence began to acquire its own shape, presence and
+          visual weight. Empty space became an active part of the image.
+        </p>
+
+        <div class="three-column">
+
+          <figure class="portrait-art">
+
+            <img
+              src="images/dark-matter-negative-space-tree.jpg"
+              alt="Negative space tree drawing"
+            >
+
+            <figcaption class="caption">
+              Negative Space — Tree
+            </figcaption>
+
+          </figure>
+
+
+          <figure class="portrait-art">
+
+            <img
+              src="images/dark-matter-negative-space-chair.jpg"
+              alt="Negative space chair drawing"
+            >
+
+            <figcaption class="caption">
+              Negative Space — Chair
+            </figcaption>
+
+          </figure>
+
+
+          <figure class="portrait-art">
+
+            <img
+              src="images/dark-matter-negative-space-hands.jpg"
+              alt="Negative space hands drawing"
+            >
+
+            <figcaption class="caption">
+              Negative Space — Hands
+            </figcaption>
+
+          </figure>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LIMINAL SPACES -->
+
+    <section class="section">
+
+      <div class="section-inner">
+
+        <p class="section-number">01.3 — Research</p>
+
+        <h2>Liminal Spaces</h2>
+
+        <p class="intro-text">
+          From the space surrounding an object, the enquiry moved towards
+          spaces that exist between destinations.
+        </p>
+
+        <p class="body-copy">
+          Stairways, corridors, entrances and waiting areas became subjects
+          because of their transitional nature. These spaces are familiar,
+          yet when emptied of people and purpose they can become uncertain,
+          quiet and strangely suspended.
+        </p>
+
+        <div class="two-column">
+
+          <figure class="portrait-art">
+
+            <img
+              src="images/dark-matter-liminal-stairway.jpg"
+              alt="Charcoal drawing of a liminal stairway"
+            >
+
+            <figcaption class="caption">
+              Liminal Space — Stairway
+            </figcaption>
+
+          </figure>
+
+
+          <figure class="landscape-art">
+
+            <img
+              src="images/dark-matter-liminal-staircase.jpg"
+              alt="Charcoal drawing of a liminal staircase"
+            >
+
+            <figcaption class="caption">
+              Liminal Space — Staircase
+            </figcaption>
+
+          </figure>
+
+        </div>
+
+
+        <div class="two-column">
+
+          <figure class="landscape-art">
+
+            <img
+              src="images/dark-matter-liminal-entrance.jpg"
+              alt="Charcoal drawing of a liminal entrance"
+            >
+
+            <figcaption class="caption">
+              Liminal Space — Entrance
+            </figcaption>
+
+          </figure>
+
+
+          <figure class="landscape-art">
+
+            <img
+              src="images/dark-matter-liminal-waiting-room.jpg"
+              alt="Charcoal drawing of a liminal waiting room"
+            >
+
+            <figcaption class="caption">
+              Liminal Space — Waiting Room
+            </figcaption>
+
+          </figure>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DRAWING IN SPACE -->
+
+    <section class="section cream-section">
+
+      <div class="section-inner split">
+
+        <div>
+
+          <p class="section-number">01.4 — Development</p>
+
+          <h2>Drawing in Space</h2>
+
+          <p class="intro-text">
+            The line began to leave the page.
+          </p>
+
+          <p class="body-copy">
+            Thread became line. Charcoal became mark. The surrounding room
+            became part of the drawing itself.
+          </p>
+
+          <p class="body-copy">
+            Suspending fragments in space allowed the work to change according
+            to viewpoint. Instead of being encountered from one fixed
+            position, the drawing could now be experienced through movement.
+          </p>
+
+        </div>
+
+        <figure>
+
+          <img
+            src="images/dark-matter-early-experiment.jpg"
+            alt="Early Dark Matter installation experiment"
+          >
+
+          <figcaption class="caption">
+            Early spatial experiment
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+    </section>
+
+
+    <!-- TESTING -->
+
+    <section class="section">
+
+      <div class="section-inner split reverse">
+
+        <figure>
+
+          <img
+            src="images/dark-matter-installation-testing.jpg"
+            alt="Testing the Dark Matter installation"
+          >
+
+          <figcaption class="caption">
+            Testing placement, density and viewpoint
+          </figcaption>
+
+        </figure>
+
+        <div>
+
+          <p class="section-number">01.5 — Experimentation</p>
+
+          <h2>Testing the Work</h2>
+
+          <p class="intro-text">
+            The installation developed through repeated experimentation with
+            tension, position, density, light and shadow.
+          </p>
+
+          <p class="body-copy">
+            Individual fragments initially appear scattered and disconnected.
+            Their relationship only becomes apparent when the viewer moves
+            through the space and discovers particular lines of sight.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- MAKING -->
+
+    <section class="section dark-section">
+
+      <div class="section-inner">
+
+        <p class="section-number">01.6 — Process</p>
+
+        <h2>Making Dark Matter</h2>
+
+        <p class="intro-text">
+          The act of making became physical: measuring, suspending, adjusting
+          and repeatedly stepping back to understand how the work behaved in
+          the room.
+        </p>
+
+        <figure class="making-image">
+
+          <img
+            src="images/dark-matter-making.jpg"
+            alt="Lea Langley working on the Dark Matter installation"
+          >
+
+          <figcaption class="caption">
+            Installing <em>Dark Matter</em>, 2026
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL INSTALLATION -->
+
+    <section class="section final-project">
+
+      <div class="section-inner">
+
+        <div class="final-title">
+
+          <p class="section-number">01.7 — Final Installation</p>
+
+          <h2>Dark Matter</h2>
+
+          <p>2026</p>
+
+        </div>
+
+
+        <figure class="final-image">
+
+          <img
+            src="images/dark-matter-installation-2026.jpg"
+            alt="Finished Dark Matter installation by Lea Langley"
+          >
+
+          <figcaption class="caption">
+            <em>Dark Matter</em>, 2026 — installation view
+          </figcaption>
+
+        </figure>
+
+
+        <div class="final-description">
+
+          <p>
+            <em>Dark Matter</em> developed from an investigation into
+            invisible forces, negative space and the relationship between
+            drawing and physical space.
+          </p>
+
+          <p>
+            Suspended fragments of charcoal form marks along almost invisible
+            lines, extending drawing beyond the surface of paper and into the
+            surrounding environment.
+          </p>
+
+          <p>
+            The work changes as the viewer moves around it. From most
+            positions the fragments appear independently throughout the
+            space; from a particular viewpoint they begin to align into a
+            concentrated spiral.
+          </p>
+
+          <p>
+            What appears solid is largely empty. Line, shadow, distance and
+            the spaces between individual fragments become as significant as
+            the charcoal itself.
+          </p>
+
+        </div>
+
+
+        <div class="video-placeholder">
+
+          <h3>Dark Matter in Motion</h3>
+
+          <p>
+            Moving-image documentation of the installation will be added here.
+            The film records how the work shifts and re-forms as the viewer
+            changes position.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- RECOGNITION -->
+
+    <section class="section cream-section" id="recognition">
+
+      <div class="section-inner recognition-grid">
+
+        <figure>
+
+          <img
+            src="images/dark-matter-award-2026.jpg"
+            alt="Lea Langley with Fine Art award in front of Dark Matter"
+          >
+
+          <figcaption class="caption">
+            Lea Langley with <em>Dark Matter</em>, 2026
+          </figcaption>
+
+        </figure>
+
+
+        <div class="award-text">
+
+          <p class="section-number">Recognition</p>
+
+          <h2>Award</h2>
+
+          <p class="award-title">
+            Best Achievement in Fine Art Practice
+          </p>
+
+          <p>
+            Awarded in recognition of the development and presentation of
+            <em>Dark Matter</em>.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRACTICE -->
+
+    <section class="section" id="practice">
+
+      <div class="section-inner practice-grid">
+
+        <div>
+          <p class="section-number">Practice</p>
+          <h2>Between Things</h2>
+        </div>
+
+        <div>
+
+          <p class="practice-statement">
+            My practice explores what exists between the things we usually
+            notice: the space surrounding an object, the invisible force
+            acting upon it, the corridor between destinations, and the
+            distance between one mark and another.
+          </p>
+
+          <p class="body-copy">
+            Drawing is often the starting point, but increasingly the line
+            moves beyond paper and into physical space. Through installation,
+            charcoal, thread, light and shadow, I am interested in how a
+            viewer's position can alter what is seen and how separate elements
+            can temporarily become one image.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section cream-section" id="about">
+
+      <div class="section-inner">
+
+        <p class="section-number">About</p>
+
+        <h2>Lea Langley</h2>
+
+        <p class="intro-text">
+          Lea Langley is a contemporary artist working across drawing,
+          mixed media and installation.
+        </p>
+
+        <p class="body-copy">
+          Her developing practice investigates line, spatial relationships,
+          negative space and the experience of moving through an artwork.
+          Drawing remains central to the process, functioning both as a
+          finished medium and as a way of researching ideas that later move
+          into three-dimensional space.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- FUTURE SELECTED WORK -->
+
+    <section class="section">
+
+      <div class="section-inner">
+
+        <p class="section-number">Selected Work</p>
+
+        <h2>More Work</h2>
+
+        <div class="future-grid">
+
+          <div class="future-card">
+            <h3>Mixed Media</h3>
+            <p>
+              Selected mixed-media work and the Manchester series will be
+              added here.
+            </p>
+          </div>
+
+          <div class="future-card">
+            <h3>Drawing</h3>
+            <p>
+              Selected architectural and observational drawings will be
+              added here.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="section contact" id="contact">
+
+      <div class="section-inner contact-wrap">
+
+        <div>
+
+          <p class="section-number">Contact</p>
+
+          <h2>Get in touch</h2>
+
+          <p>
+            For exhibition enquiries, collaborations, artwork enquiries or
+            general correspondence:
+          </p>
+
+          <p class="contact-email">
+            <a href="mailto:studio@lealangley.art">
+              studio@lealangley.art
+            </a>
+          </p>
+
+        </div>
+
+
+        <form
+          action="https://formspree.io/f/mqabjdga"
+          method="POST"
+        >
+
+          <div>
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+            >
+          </div>
+
+
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+            >
+          </div>
+
+
+          <div>
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+            ></textarea>
+          </div>
+
+
+          <button type="submit">
+            Send enquiry
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <span>
+      © 2026 Lea Langley
+    </span>
+
+    <span>
+      Drawing · Space · Installation
+    </span>
+
+  </footer>
 
 </body>
 </html>
