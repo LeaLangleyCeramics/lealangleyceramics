@@ -570,7 +570,15 @@
         padding-left: 1.2rem;
         padding-right: 1.2rem;
       }
-    }
+      
+    .video-placeholder video {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  background: #000;
+}  
   </style>
 </head>
 
@@ -1044,16 +1052,26 @@
 
 
         <div class="video-placeholder">
+          
+  <h3>Dark Matter in Motion</h3>
 
-          <h3>Dark Matter in Motion</h3>
+  <video controls playsinline preload="metadata">
 
-          <p>
-            Moving-image documentation of the installation will be added here.
-            The film records how the work shifts and re-forms as the viewer
-            changes position.
-          </p>
+    <source src="videos/dark-matter-installation-video.mov" type="video/quicktime">
 
-        </div>
+    Your browser does not support embedded video.
+
+  </video>
+
+  <p>
+
+    Moving-image documentation of Dark Matter, recording how the work
+
+    shifts and re-forms as the viewer changes position.
+
+  </p>
+
+</div>
 
       </div>
 
