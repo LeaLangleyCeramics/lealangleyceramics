@@ -579,7 +579,61 @@
   margin: 2rem auto;
   background: #000;
 }  
-  </style>
+
+      /* WHERE IT ALL BEGAN GALLERY */
+
+.artwork-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3.5rem 2.5rem;
+  margin-top: 3rem;
+}
+
+.artwork-item {
+  margin: 0;
+}
+
+.artwork-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #fff;
+}
+
+.artwork-item figcaption {
+  margin-top: 1rem;
+}
+
+.artwork-item h3 {
+  margin: 0 0 0.35rem;
+  font-family: Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: normal;
+}
+
+.artwork-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--grey);
+}
+
+.artwork-item:last-child {
+  grid-column: 1 / -1;
+  max-width: 650px;
+  justify-self: center;
+}
+
+@media (max-width: 760px) {
+  .artwork-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .artwork-item:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+}  </style>
 </head>
 
 
@@ -637,11 +691,139 @@
 
       <div class="section-inner">
 
-        <div class="project-intro">
+        <!-- WHERE IT ALL BEGAN -->
+
+<div class="project-intro">
+
+  <div>
+    <p class="section-number">01 — Where It All Began</p>
+    <h2>Where It All Began</h2>
+
+    <p class="intro-text">
+      I have always been artistic, but I was not always an artist. After surviving breast cancer, I made the decision that I wanted to become a full-time artist. It was not an immediate transition; it took five years to finally reach the point where I could begin pursuing art seriously.
+    </p>
+
+    <p class="intro-text">
+      These drawings belong to that beginning. Architecture and the places around me became my subjects, allowing me to develop patience, observation and confidence through detailed mark-making. Looking back, they represent more than the buildings themselves; they mark the point at which art began to move from something I loved into something I wanted to build my life around.
+    </p>
+
+  </div>
+
+</div>
+<!-- WHERE IT ALL BEGAN -->
+
+<div class="project-intro">
+
+  <div>
+    <p class="section-number">01 — Where It All Began</p>
+    <h2>Where It All Began</h2>
+
+    <p class="intro-text">
+      I have always been artistic, but I was not always an artist. After surviving breast cancer, I made the decision that I wanted to become a full-time artist. It was not an immediate transition; it took five years to finally reach the point where I could begin pursuing art seriously.
+    </p>
+
+    <p class="intro-text">
+      These drawings belong to that beginning. Architecture and the places around me became my subjects, allowing me to develop patience, observation and confidence through detailed mark-making. Looking back, they represent more than the buildings themselves; they mark the point at which art began to move from something I loved into something I wanted to build my life around.
+    </p>
+
+  </div>
+
+</div>
+
+        <!-- WHERE IT ALL BEGAN GALLERY -->
+
+<div class="artwork-grid">
+
+  <figure class="artwork-item">
+    <img src="images/the-arches.jpg" alt="The Arches, drawing by Lea Langley">
+    <figcaption>
+      <h3>The Arches</h3>
+      <p>Ink drawing</p>
+    </figcaption>
+  </figure>
+
+  <figure class="artwork-item">
+    <img src="images/the-old-bank.jpg" alt="The Old Bank, drawing by Lea Langley">
+    <figcaption>
+      <h3>The Old Bank</h3>
+      <p>Ink drawing</p>
+    </figcaption>
+  </figure>
+
+  <figure class="artwork-item">
+    <img src="images/the-town-hall.jpg" alt="The Town Hall, drawing by Lea Langley">
+    <figcaption>
+      <h3>The Town Hall</h3>
+      <p>Ink drawing</p>
+    </figcaption>
+  </figure>
+
+  <figure class="artwork-item">
+    <img src="images/the-mill.jpg" alt="The Mill, drawing by Lea Langley">
+    <figcaption>
+      <h3>The Mill</h3>
+      <p>Ink drawing</p>
+    </figcaption>
+  </figure>
+
+  <figure class="artwork-item">
+    <img src="images/a-climb-through-colour.jpg" alt="A Climb Through Colour, drawing by Lea Langley">
+    <figcaption>
+      <h3>A Climb Through Colour</h3>
+      <p>Ink and coloured ink drawing</p>
+    </figcaption>
+  </figure>
+
+</div>        <div class="project-intro">
 
           <div>
-            <p class="section-number">01 — Selected Project</p>
+           <!-- WHERE IT ALL BEGAN GALLERY -->
 
+<div class="artwork-grid">
+
+  <figure class="artwork-item">
+    <img src="images/the-arches.jpg" alt="The Arches, drawing by Lea Langley">
+    <figcaption>
+      <h3>The Arches</h3>
+      <p>Ink drawing</p>
+    </figcaption>
+  </figure>
+
+  <figure class="artwork-item">
+    <img src="images/the-old-bank.jpg" alt="The Old Bank, drawing by Lea Langley">
+    <figcaption>
+      <h3>The Old Bank</h3>
+      <p>Ink drawing</p>
+    </figcaption>
+  </figure>
+
+  <figure class="artwork-item">
+    <img src="images/the-town-hall.jpg" alt="The Town Hall, drawing by Lea Langley">
+    <figcaption>
+      <h3>The Town Hall</h3>
+      <p>Ink drawing</p>
+    </figcaption>
+  </figure>
+
+  <figure class="artwork-item">
+    <img src="images/the-mill.jpg" alt="The Mill, drawing by Lea Langley">
+    <figcaption>
+      <h3>The Mill</h3>
+      <p>Ink drawing</p>
+    </figcaption>
+  </figure>
+
+  <figure class="artwork-item">
+    <img src="images/a-climb-through-colour.jpg" alt="A Climb Through Colour, drawing by Lea Langley">
+    <figcaption>
+      <h3>A Climb Through Colour</h3>
+      <p>Ink and coloured ink drawing</p>
+    </figcaption>
+  </figure>
+
+</div>
+
+<p class="section-number">02 – Selected Project</p>
             <h2>Dark Matter</h2>
 
             <p class="intro-text">
