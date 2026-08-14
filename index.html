@@ -580,60 +580,88 @@
   background: #000;
 }  
 
-      /* WHERE IT ALL BEGAN GALLERY */
+/* WHERE IT ALL BEGAN STORY */
 
-.artwork-grid {
+.artwork-story {
+  margin-top: 4rem;
+}
+
+.artwork-row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 3.5rem 2.5rem;
-  margin-top: 3rem;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 7rem;
 }
 
-.artwork-item {
-  margin: 0;
+.artwork-row.reverse .artwork-text {
+  order: 2;
 }
 
-.artwork-item img {
+.artwork-row.reverse .artwork-image {
+  order: 1;
+}
+
+.artwork-text {
+  max-width: 520px;
+}
+
+.artwork-text h3,
+.artwork-reflection h3 {
+  margin: 0 0 1rem;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  font-weight: 400;
+}
+
+.artwork-text p,
+.artwork-reflection p {
+  line-height: 1.65;
+}
+
+.artwork-medium {
+  margin: 0 0 1.5rem;
+  color: var(--grey);
+  font-size: 0.92rem;
+}
+
+.artwork-image img {
   width: 100%;
   height: auto;
   display: block;
   background: #fff;
 }
 
-.artwork-item figcaption {
-  margin-top: 1rem;
-}
-
-.artwork-item h3 {
-  margin: 0 0 0.35rem;
-  font-family: Georgia, serif;
-  font-size: 1.35rem;
-  font-weight: normal;
-}
-
-.artwork-item p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--grey);
-}
-
-.artwork-item:last-child {
-  grid-column: 1 / -1;
-  max-width: 650px;
-  justify-self: center;
+.artwork-reflection {
+  max-width: 760px;
+  margin: 2rem auto 1rem;
+  padding: 5rem 0 2rem;
+  text-align: left;
 }
 
 @media (max-width: 760px) {
-  .artwork-grid {
+  .artwork-row,
+  .artwork-row.reverse {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
+    margin-bottom: 5rem;
   }
 
-  .artwork-item:last-child {
-    grid-column: auto;
+  .artwork-row.reverse .artwork-text,
+  .artwork-row.reverse .artwork-image {
+    order: initial;
+  }
+
+  .artwork-text {
     max-width: none;
   }
-}  </style>
+
+  .artwork-reflection {
+    padding-top: 3rem;
+  }
+}
+      </style>
 </head>
 
 
@@ -1219,50 +1247,127 @@
 
         <!-- WHERE IT ALL BEGAN GALLERY -->
 
-<div class="artwork-grid">
+<!-- WHERE IT ALL BEGAN ARTWORKS -->
 
-  <figure class="artwork-item">
-    <img src="images/the-arches.jpg" alt="The Arches, drawing by Lea Langley">
-    <figcaption>
+<div class="artwork-story">
+
+  <article class="artwork-row">
+    <div class="artwork-text">
+      <p class="section-number">02.1 — THE ARCHES</p>
       <h3>The Arches</h3>
-      <p>Ink drawing</p>
-    </figcaption>
-  </figure>
+      <p class="artwork-medium">Ink drawing</p>
 
-  <figure class="artwork-item">
-    <img src="images/the-old-bank.jpg" alt="The Old Bank, drawing by Lea Langley">
-    <figcaption>
+      <p>This was my first architectural drawing, and the beginning of what would become a lasting fascination with buildings, structures and the spaces they create.</p>
+
+      <p>I wanted to capture the sheer scale of the railway arches that cut through the centre of Todmorden like a great stone spine. While drawing them, I often found myself thinking about the men who built them, working without the machinery we have today and raising something so enormous, stone by stone.</p>
+
+      <p>There is something more personal here too. Through this particular arch is the road towards Lancashire and the place where I was born. Passing beneath this side of the bridge has always carried a familiar feeling; depending on which direction I am travelling, it tells me that I am either leaving home or coming back to it.</p>
+    </div>
+
+    <div class="artwork-image">
+      <img src="images/the-arches.jpg" alt="The Arches, drawing by Lea Langley">
+    </div>
+  </article>
+
+
+  <article class="artwork-row reverse">
+    <div class="artwork-text">
+      <p class="section-number">02.2 — THE OLD BANK</p>
       <h3>The Old Bank</h3>
-      <p>Ink drawing</p>
-    </figcaption>
-  </figure>
+      <p class="artwork-medium">Ink drawing</p>
 
-  <figure class="artwork-item">
-    <img src="images/the-town-hall.jpg" alt="The Town Hall, drawing by Lea Langley">
-    <figcaption>
+      <p>Sitting at a point where the streets of Hebden Bridge seem to fork around it, The Old Bank is a building I had passed many times without really stopping to look at.</p>
+
+      <p>For such a beautiful and detailed building, it has always seemed strangely quiet to me. Perhaps it is because of the landscape surrounding it. The hills rise so dramatically behind the town that even a building as ornate as this can somehow appear small.</p>
+
+      <p>Curiously, I tend to notice it most when travelling through Hebden Bridge by car. For a moment it sits directly ahead, framed by the streets splitting away on either side, before disappearing again as you pass it.</p>
+
+      <p>Drawing it made me stop and properly look at something that had always been there, but which I had never really seen.</p>
+    </div>
+
+    <div class="artwork-image">
+      <img src="images/the-old-bank.jpg" alt="The Old Bank, drawing by Lea Langley">
+    </div>
+  </article>
+
+
+  <article class="artwork-row">
+    <div class="artwork-text">
+      <p class="section-number">02.3 — THE TOWN HALL</p>
       <h3>The Town Hall</h3>
-      <p>Ink drawing</p>
-    </figcaption>
-  </figure>
+      <p class="artwork-medium">Ink drawing</p>
 
-  <figure class="artwork-item">
-    <img src="images/the-mill.jpg" alt="The Mill, drawing by Lea Langley">
-    <figcaption>
+      <p>Todmorden Town Hall has dominated the centre of the town for as long as I can remember. Even as a child, it seemed enormous compared with everything surrounding it, almost like the godfather of the town, quietly watching over the streets below.</p>
+
+      <p>Designed by John Gibson and opened in 1875, the building has an unusual relationship with place. It was built across Walsden Water, which once marked the boundary between Lancashire and Yorkshire, meaning the Town Hall originally stood in two counties at once.</p>
+
+      <p>This drawing began with a photograph I had taken looking upwards towards the curved end of the building. I wanted the perspective to exaggerate the feeling I had always had when standing beside it, its height, weight and sheer presence.</p>
+
+      <p>It was also the first time I introduced colour into one of my architectural drawings. The red post box felt just as important to me as the building itself, a small point of familiarity and scale beside something so monumental.</p>
+    </div>
+
+    <div class="artwork-image">
+      <img src="images/the-town-hall.jpg" alt="The Town Hall, drawing by Lea Langley">
+    </div>
+  </article>
+
+
+  <article class="artwork-row reverse">
+    <div class="artwork-text">
+      <p class="section-number">02.4 — THE MILL</p>
       <h3>The Mill</h3>
-      <p>Ink drawing</p>
-    </figcaption>
-  </figure>
+      <p class="artwork-medium">Ink drawing</p>
 
-  <figure class="artwork-item">
-    <img src="images/a-climb-through-colour.jpg" alt="A Climb Through Colour, drawing by Lea Langley">
-    <figcaption>
+      <p>The Mill sits at the heart of Hebden Bridge, beside St George's Square, a place where people gather outside cafés and pubs and where the sound of street musicians often fills the centre of the town.</p>
+
+      <p>A mill has stood on this site for centuries, long before Hebden Bridge developed into the town that surrounds it today. Its purpose has changed over time, yet the building remains firmly rooted in the life of the town.</p>
+
+      <p>What first attracted me to the building were its angles. From this viewpoint, the corner seems to push forward while the streets lead away on either side. Behind it, the houses climb the hillside at different heights and angles, while the tall chimney draws the eye upwards. There is a sense of everything moving in different directions, yet somehow fitting together.</p>
+
+      <p>As with my earlier drawings, I used small areas of red to interrupt the black ink, giving the eye somewhere to settle amongst all those lines.</p>
+    </div>
+
+    <div class="artwork-image">
+      <img src="images/the-mill.jpg" alt="The Mill, drawing by Lea Langley">
+    </div>
+  </article>
+
+
+  <article class="artwork-row">
+    <div class="artwork-text">
+      <p class="section-number">02.5 — A CLIMB THROUGH COLOUR</p>
       <h3>A Climb Through Colour</h3>
-      <p>Ink and coloured ink drawing</p>
-    </figcaption>
-  </figure>
+      <p class="artwork-medium">Ink and coloured pen drawing</p>
 
-</div>      
+      <p>This drawing began with a stairway that I felt had been overlooked. Rather than drawing the space exactly as I found it, I began to imagine what it might become if it were cleaned up, cared for and brought back to life.</p>
 
+      <p>I filled the stairway with flowers and greenery, gradually introducing far more colour than I had used in my previous architectural drawings. Against the black and white buildings, the planting almost takes over, transforming what had been an ordinary passageway into somewhere I would actually want to explore.</p>
+
+      <p>I was also drawn to the staircase itself. It leads the eye upwards through the centre of the drawing, disappearing between the buildings and continuing towards the houses above. There is a sense of wanting to know what lies beyond the next set of steps.</p>
+
+      <p>Looking back, this was also one of the first times I moved away from simply recording a place as it existed. I was beginning to use drawing to imagine how a space might feel differently.</p>
+    </div>
+
+    <div class="artwork-image">
+      <img src="images/a-climb-through-colour.jpg" alt="A Climb Through Colour, drawing by Lea Langley">
+    </div>
+  </article>
+
+
+  <div class="artwork-reflection">
+    <p class="section-number">02.6 — REFLECTION</p>
+    <h3>Looking Back</h3>
+
+    <p>At the time, these drawings were simply a way for Lea to capture buildings and places that caught her attention.</p>
+
+    <p>Looking back, there was already an interest in more than the architecture itself; the spaces between buildings, the directions they lead, their scale, their lines, and the experience of moving amongst them.</p>
+
+    <p>There was no particular destination in mind. She was simply drawing what interested her.</p>
+
+    <p>Perhaps this really was where it all began.</p>
+  </div>
+
+</div>
 
 
       </div>
